@@ -1,0 +1,71 @@
+@import "../bootstrap/scss/bootstrap.scss";
+/*Estoy importando toda la libreria de Bootstrap, se que no utilizare la mayoria de componentes pero 
+me gusta trabajar asi*/
+
+/*Reseteo Etiquetas/Normalize*/
+html {
+  box-sizing: border-box;
+  font-family: "Public Sans", sans-serif;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+img,
+audio,
+video,
+iframe,
+canvas,
+svg,
+picture {
+  max-width: 100%;
+  height: auto;
+}
+a {
+  color: black;
+  text-decoration: none;
+  transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+}
+a:hover {
+  box-shadow: inset 0 -2px 0 whithe;
+  opacity: 0.8;
+}
+ul {
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+button {
+  cursor: pointer;
+  border: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+.header {
+  height: 100vh;
+  background-image: url(/assets/imagens/w.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+
+  .navbar {
+    position: sticky;
+    top: 0;
+  }
+}
