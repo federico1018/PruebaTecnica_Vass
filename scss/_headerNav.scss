@@ -1,0 +1,92 @@
+/*NAVBAR/NAV/*/
+.header {
+  position: relative;
+  height: 80vh;
+  background-image: url(/assets/imagens/Vass_Escalera.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  .title {
+    position: absolute;
+    bottom: 5%;
+    font-size: 15vw;
+    color: $gray-100;
+    opacity: 0.5;
+  }
+  .navbar {
+    padding: 10px;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    top: 0;
+    font-size: 1.2rem;
+  }
+}
+/*MediaQuery Menu Movil*/
+@media (max-width: 990px) {
+  .header {
+    padding: 0;
+    .navbar {
+      padding: 0;
+    }
+    .nav-flex {
+      width: 100%;
+      background-color: $black;
+      .nav-mobile {
+        height: 100vh;
+        padding-top: 5rem;
+      }
+    }
+    .talento {
+      margin-top: -2.5rem;
+      .talento-link {
+        color: white;
+      }
+    }
+    .navbar-nav {
+      .nav-item {
+        .order {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+/*MediaQuery Menu Desktop*/
+@media (min-width: 990px) {
+  .header {
+    .title {
+      left: 15%;
+      bottom: -15%;
+      font-size: 13vw;
+    }
+    .navbar-nav {
+      width: 92%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      .order {
+        order: 1;
+      }
+    }
+    .talento {
+      border-left: 1px solid #fff;
+      position: fixed;
+      z-index: 1;
+    }
+    .talento {
+      height: 100vh;
+      right: 0;
+      top: 0;
+    }
+    .talento-link {
+      position: absolute;
+      top: 32px;
+      left: 20px;
+      color: $info;
+    }
+    .col-1 {
+      flex: 0 0 8.33333333%;
+      max-width: 8.33333333%;
+    }
+  }
+}

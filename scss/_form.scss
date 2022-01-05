@@ -1,0 +1,106 @@
+.formulario {
+  width: 100%;
+  background-color: $black;
+  border-bottom: 3px solid white;
+  .container-form {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    .form {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      .left {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        .label {
+          color: white;
+          width: 100%;
+          margin-bottom: 4rem;
+          &__input {
+            width: inherit;
+            border-style: none;
+            background-color: $black;
+            border-bottom: 1px solid rgb(105, 103, 103);
+            color: white;
+            &::placeholder {
+              color: white;
+            }
+          }
+        }
+      }
+
+      .rigth {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        .label {
+          color: white;
+          width: 100%;
+          margin-bottom: 4rem;
+          &__input {
+            width: inherit;
+            border-style: none;
+            background-color: $black;
+            border-bottom: 1px solid rgb(105, 103, 103);
+            color: white;
+            &::placeholder {
+              color: white;
+            }
+          }
+        }
+        .textarea {
+          height: 150px;
+          margin-top: 2rem;
+          resize: none;
+          border: 2px solid rgb(71, 70, 70);
+          border-radius: 10px;
+          -webkit-border-radius: 10px;
+          -moz-border-radius: 10px;
+          -ms-border-radius: 10px;
+          -o-border-radius: 10px;
+        }
+        button {
+          align-self: flex-end;
+          padding: 2rem;
+          color: white;
+          background-color: $black;
+          font-weight: bold;
+          border: 1px solid white;
+          border-radius: 100%;
+          -webkit-border-radius: 100%;
+          -moz-border-radius: 100%;
+          -ms-border-radius: 100%;
+          -o-border-radius: 100%;
+
+          &:hover {
+            background-color: white;
+            color: $black;
+          }
+        }
+      }
+    }
+  }
+}
+/*MediaQuery 1000px*/
+@media screen and (min-width: 1100px) {
+  .formulario {
+    .container-form {
+      .form {
+        max-width: 900px;
+        display: flex;
+        gap: 4rem;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        .left {
+          margin-top: -92px;
+        }
+        .label {
+          max-width: 400px;
+        }
+      }
+    }
+  }
+}

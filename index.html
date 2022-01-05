@@ -13,61 +13,108 @@
 </head>
 
 <body>
-    <!--Main Principal-->
-    <main>
-        <!--Header/HeroImage-->
-        <header class="header">
-            <!--Menu/Enlaces-->
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="container-fluid border border-info p-2 m-3 mt-1">
-                    <a class="navbar-brand" href="#">
-                        <img src="   https://vasscompany.com/wp-content/uploads/2020/07/logo-vass-blanco.png"
-                            alt="VassLogo">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item ">
-                                <a class="nav-link" aria-current="page" href="#">Casos de exito</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link dropdown-toggle" href="#">Mercados</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link dropdown-toggle">Países</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link dropdown-toggle">Somos VASS</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link dropdown-toggle">Cómo lo hacemos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link">Insights</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link">Noticias</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link">VASS Research</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link">EN</a>
-                            </li>
-                        </ul>
-                        <a href="#"></a>
+    <!--Lo unico que utilice de Bootstrap fue el Navbar, se me hizo mas un poco copmplejo, tambien me gusta maquetar con puro css-->
 
+    <!--Header/HeroImage-->
+    <header class="header">
+        <!--Menu/Enlaces-->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="nav-flex container-fluid p-3">
+                <a class="navbar-brand" href="#">
+                    <img src="   https://vasscompany.com/wp-content/uploads/2020/07/logo-vass-blanco.png"
+                        alt="VassLogo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="nav-mobile collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav me-auto mb-5 mb-lg-0 ">
+                        <li class="nav-item order">
+                            <a class="nav-link text-light">EN</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light">Home</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link text-light" aria-current="page" href="#">Casos de exito</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light dropdown-toggle" href="#">Mercados</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light dropdown-toggle">Cómo lo hacemos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light dropdown-toggle">Somos VASS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light">Insights</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light ">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light">VASS Research</a>
+                        </li>
+                    </ul>
+                    <div class="col-1 talento">
+                        <a class="talento-link" href="#">Talento</a>
                     </div>
                 </div>
-            </nav>
-        </header>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            </div>
+        </nav>
+        <h1 class="title">
+            CONTACTO
+        </h1>
+    </header>
+    <!--Section Slogan-->
+    <section class="slogan">
+        <div class="container-slogan wraper">
+            <div class="encabezado">
+                <h6 class="encabezado__title">EMPECEMOS A HACERLO SENCILLO</h6>
+            </div>
+            <div class="paragraph">
+                <p class="paragraph__parrafo">Nos emociona impulsar tu transformación digital</p>
+            </div>
+        </div>
+    </section>
+    <!--Section Form-->
+    <section class="formulario">
+        <article class="container-form wraper">
+            <!--Formulario-->
+            <form action="#" class="form">
+                <div class="left">
+                    <label class="label">
+                        <input class="label__input" type="text" name="name" placeholder="Nombre y apellidos" required>
+                    </label>
+                    <label class="label">
+                        <input class="label__input" type="email" name="email" placeholder="Email" required>
+                    </label>
+                    <label class="label">
+                        <input class="label__input" type="text" name="empresa" placeholder="Empresa/Organismo" required>
+                    </label>
+                    <label class="label">
+                        <input class="label__input" type="text" name="pais" placeholder="País">
+                    </label>
+                </div>
+                <div class="rigth">
+                    <label class="label ">
+                        <input class="label__input" type="tel" name="tel" placeholder="Teléfono">
+                    </label>
+                    <label class="label">
+                        <span>Mensaje</span>
+                        <textarea class="label__input textarea" name="mensaje" required></textarea>
+                    </label>
+                    <button type="submit ">
+                        Enviar
+                    </button>
+                </div>
+            </form>
+        </article>
+    </section>
 
-    </main>
 
     <!--Porgramación/Carpeta Js-->
     <script src="/bootstrap/dist/js/bootstrap.min.js"></script>

@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/*Importando toda la libreria de BootsTrap, tambien las secciones de la pagina, modularizo para tener mas orden*/
 /*!
  * Bootstrap v5.0.2 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -4142,7 +4143,7 @@ textarea.form-control-lg {
   color: rgba(0, 0, 0, 0.9);
 }
 .navbar-light .navbar-nav .nav-link {
-  color: rgba(0, 0, 0, 0.55);
+  color: rgba(255, 255, 255, 0.55);
 }
 .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
   color: rgba(0, 0, 0, 0.7);
@@ -4155,14 +4156,14 @@ textarea.form-control-lg {
   color: rgba(0, 0, 0, 0.9);
 }
 .navbar-light .navbar-toggler {
-  color: rgba(0, 0, 0, 0.55);
+  color: rgba(255, 255, 255, 0.55);
   border-color: rgba(0, 0, 0, 0.1);
 }
 .navbar-light .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 .navbar-light .navbar-text {
-  color: rgba(0, 0, 0, 0.55);
+  color: rgba(255, 255, 255, 0.55);
 }
 .navbar-light .navbar-text a,
 .navbar-light .navbar-text a:hover,
@@ -10746,8 +10747,255 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-/*Estoy importando toda la libreria de Bootstrap, se que no utilizare la mayoria de componentes pero 
-me gusta trabajar asi*/
+/*NAVBAR/NAV/*/
+.header {
+  position: relative;
+  height: 80vh;
+  background-image: url(/assets/imagens/Vass_Escalera.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+.header .title {
+  position: absolute;
+  bottom: 5%;
+  font-size: 15vw;
+  color: #f8f9fa;
+  opacity: 0.5;
+}
+.header .navbar {
+  padding: 10px;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  top: 0;
+  font-size: 1.2rem;
+}
+
+/*MediaQuery Menu Movil*/
+@media (max-width: 990px) {
+  .header {
+    padding: 0;
+  }
+  .header .navbar {
+    padding: 0;
+  }
+  .header .nav-flex {
+    width: 100%;
+    background-color: #000;
+  }
+  .header .nav-flex .nav-mobile {
+    height: 100vh;
+    padding-top: 5rem;
+  }
+  .header .talento {
+    margin-top: -2.5rem;
+  }
+  .header .talento .talento-link {
+    color: white;
+  }
+  .header .navbar-nav .nav-item .order {
+    font-size: 14px;
+  }
+}
+/*MediaQuery Menu Desktop*/
+@media (min-width: 990px) {
+  .header .title {
+    left: 15%;
+    bottom: -15%;
+    font-size: 13vw;
+  }
+  .header .navbar-nav {
+    width: 92%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .header .navbar-nav .order {
+    order: 1;
+  }
+  .header .talento {
+    border-left: 1px solid #fff;
+    position: fixed;
+    z-index: 1;
+  }
+  .header .talento {
+    height: 100vh;
+    right: 0;
+    top: 0;
+  }
+  .header .talento-link {
+    position: absolute;
+    top: 32px;
+    left: 20px;
+    color: #0dcaf0;
+  }
+  .header .col-1 {
+    flex: 0 0 8.33333333%;
+    max-width: 8.33333333%;
+  }
+}
+.slogan {
+  width: 100%;
+}
+.slogan .container-slogan {
+  margin-top: 7rem;
+  margin-bottom: 4rem;
+}
+.slogan .container-slogan .encabezado__title {
+  max-width: 150px;
+  font-size: var(--step--3);
+  font-weight: bold;
+}
+.slogan .container-slogan .paragraph {
+  border-left: 1px solid #000;
+}
+.slogan .container-slogan .paragraph__parrafo {
+  font-weight: bold;
+  margin-top: 1.5rem;
+  padding-left: 1.7rem;
+}
+
+/*MediaQuery 720px*/
+@media screen and (min-width: 720px) {
+  .slogan .container-slogan {
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-start;
+  }
+  .slogan .container-slogan .encabezado__title {
+    max-width: 80px;
+  }
+  .slogan .container-slogan .paragraph {
+    height: 50px;
+  }
+  .slogan .container-slogan .paragraph__parrafo {
+    max-width: 250px;
+    margin-top: -2px;
+  }
+}
+/*MediaQuery >1190px*/
+@media screen and (min-width: 1000px) {
+  .slogan .container-slogan {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+  .slogan .container-slogan .encabezado__title {
+    max-width: 150px;
+  }
+  .slogan .container-slogan .paragraph {
+    height: 20px;
+  }
+  .slogan .container-slogan .paragraph__parrafo {
+    min-width: 500px;
+    margin-top: -2px;
+  }
+}
+.wraper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.formulario {
+  width: 100%;
+  background-color: #000;
+  border-bottom: 3px solid white;
+}
+.formulario .container-form {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+.formulario .container-form .form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.formulario .container-form .form .left {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.formulario .container-form .form .left .label {
+  color: white;
+  width: 100%;
+  margin-bottom: 4rem;
+}
+.formulario .container-form .form .left .label__input {
+  width: inherit;
+  border-style: none;
+  background-color: #000;
+  border-bottom: 1px solid #696767;
+  color: white;
+}
+.formulario .container-form .form .left .label__input::placeholder {
+  color: white;
+}
+.formulario .container-form .form .rigth {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.formulario .container-form .form .rigth .label {
+  color: white;
+  width: 100%;
+  margin-bottom: 4rem;
+}
+.formulario .container-form .form .rigth .label__input {
+  width: inherit;
+  border-style: none;
+  background-color: #000;
+  border-bottom: 1px solid #696767;
+  color: white;
+}
+.formulario .container-form .form .rigth .label__input::placeholder {
+  color: white;
+}
+.formulario .container-form .form .rigth .textarea {
+  height: 150px;
+  margin-top: 2rem;
+  resize: none;
+  border: 2px solid #474646;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.formulario .container-form .form .rigth button {
+  align-self: flex-end;
+  padding: 2rem;
+  color: white;
+  background-color: #000;
+  font-weight: bold;
+  border: 1px solid white;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+}
+.formulario .container-form .form .rigth button:hover {
+  background-color: white;
+  color: #000;
+}
+
+/*MediaQuery 1000px*/
+@media screen and (min-width: 1100px) {
+  .formulario .container-form .form {
+    max-width: 900px;
+    display: flex;
+    gap: 4rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .formulario .container-form .form .left {
+    margin-top: -92px;
+  }
+  .formulario .container-form .form .label {
+    max-width: 400px;
+  }
+}
 /*Reseteo Etiquetas/Normalize*/
 html {
   box-sizing: border-box;
@@ -10817,15 +11065,20 @@ h4,
   margin: 0;
 }
 
-.header {
-  height: 100vh;
-  background-image: url(/assets/imagens/w.jpg);
-  background-size: cover;
-  background-attachment: fixed;
-}
-.header .navbar {
-  position: sticky;
-  top: 0;
+/*Responsive Fluid Desing*/
+/* 
+@link https://utopia.fyi/type/calculator?c=320,21,1.2,1140,24,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l 
+
+USO ESTA TECNICA PARA HACER TEXTOS RESPONSIVOS Y MAS COSAS.*/
+:root {
+  --step--2: clamp(0.91rem, 0.89rem + 0.1vw, 0.96rem);
+  --step--1: clamp(1.09rem, 1.05rem + 0.21vw, 1.2rem);
+  --step-0: clamp(1.31rem, 1.24rem + 0.37vw, 1.5rem);
+  --step-1: clamp(1.58rem, 1.46rem + 0.59vw, 1.88rem);
+  --step-2: clamp(1.89rem, 1.71rem + 0.89vw, 2.34rem);
+  --step-3: clamp(2.27rem, 2.01rem + 1.29vw, 2.93rem);
+  --step-4: clamp(2.72rem, 2.36rem + 1.83vw, 3.66rem);
+  --step-5: clamp(3.27rem, 2.75rem + 2.56vw, 4.58rem);
 }
 
 /*# sourceMappingURL=main.css.map */
