@@ -10814,7 +10814,7 @@ textarea.form-control-lg {
     order: 1;
   }
   .header .talento {
-    border-left: 1px solid #fff;
+    border-left: 1px solid #0a0a0a;
     position: fixed;
     z-index: 1;
   }
@@ -10898,7 +10898,7 @@ textarea.form-control-lg {
 .formulario {
   width: 100%;
   background-color: #000;
-  border-bottom: 3px solid white;
+  border-bottom: 2px solid white;
 }
 .formulario .container-form {
   padding-top: 4rem;
@@ -10923,6 +10923,7 @@ textarea.form-control-lg {
 .formulario .container-form .form .left .label__input {
   width: inherit;
   border-style: none;
+  outline: none;
   background-color: #000;
   border-bottom: 1px solid #696767;
   color: white;
@@ -10996,6 +10997,103 @@ textarea.form-control-lg {
     max-width: 400px;
   }
 }
+.footer {
+  width: 100%;
+  background-color: #141414;
+}
+.footer .container-footer {
+  color: white;
+}
+.footer .container-footer .hr {
+  width: 100vw;
+  height: 2px;
+  color: white;
+}
+.footer .container-footer .footer-info {
+  padding: 1rem;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100px 1fr;
+}
+.footer .container-footer .footer-info .uno {
+  margin-top: 2rem;
+  grid-row: 1/1;
+  grid-column: 1/4;
+  text-align: right;
+}
+.footer .container-footer .footer-info .dos {
+  grid-row: 3/4;
+}
+.footer .container-footer .footer-info .apartado__logo {
+  display: none;
+}
+.footer .container-footer .footer-info .apartado__title {
+  font-size: var(--step--4);
+  margin-bottom: 1rem;
+}
+.footer .container-footer .footer-info .apartado__nav a {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 14px;
+  color: white;
+}
+.footer .container-footer .footer-copy {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+.footer .container-footer .footer-copy .footer-icons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+/*MediaQuery 720px*/
+@media screen and (min-width: 720px) {
+  .footer .container-footer .footer-info {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .footer .container-footer .footer-info .uno {
+    height: 320px;
+    margin-top: -2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .footer .container-footer .footer-info .apartado__logo {
+    display: block;
+  }
+  .footer .container-footer .footer-copy {
+    margin: 0 auto;
+    max-width: 500px;
+  }
+}
+/*MediaQuery >1190px*/
+@media screen and (min-width: 1000px) {
+  .footer .container-footer .footer-info {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  .footer .container-footer .footer-copy {
+    max-width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .footer .container-footer .footer-copy .footer-icons {
+    max-width: 120px;
+  }
+}
 /*Reseteo Etiquetas/Normalize*/
 html {
   box-sizing: border-box;
@@ -11014,6 +11112,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  min-width: 270px;
 }
 
 img,

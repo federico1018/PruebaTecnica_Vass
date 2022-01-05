@@ -4,6 +4,7 @@
 @import "slogan";
 @import "utilities";
 @import "form";
+@import "footer";
 
 /*Reseteo Etiquetas/Normalize*/
 html {
@@ -21,6 +22,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  min-width: 270px;
 }
 img,
 audio,

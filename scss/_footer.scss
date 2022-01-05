@@ -1,0 +1,110 @@
+.footer {
+  width: 100%;
+  background-color: #141414;
+  .container-footer {
+    color: white;
+    .hr {
+      width: 100vw;
+      height: 2px;
+      color: white;
+    }
+    .footer-info {
+      padding: 1rem;
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 100px 1fr;
+      .uno {
+        margin-top: 2rem;
+        grid-row: 1 / 1;
+        grid-column: 1/4;
+        text-align: right;
+      }
+      .dos {
+        grid-row: 3 / 4;
+      }
+      .apartado {
+        &__logo {
+          display: none;
+        }
+        &__title {
+          font-size: var(--step--4);
+          margin-bottom: 1rem;
+        }
+        &__nav {
+          a {
+            display: block;
+            margin-bottom: 2px;
+            font-size: 14px;
+            color: white;
+          }
+        }
+      }
+    }
+    .footer-copy {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 1rem;
+      text-align: center;
+      display: flex;
+      gap: 1rem;
+      flex-direction: column;
+      .footer-icons {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
+        gap: 1rem;
+      }
+    }
+  }
+}
+/*MediaQuery 720px*/
+@media screen and (min-width: 720px) {
+  .footer {
+    .container-footer {
+      .footer-info {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        .uno {
+          height: 320px;
+          margin-top: -2px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+        .apartado {
+          &__logo {
+            display: block;
+          }
+        }
+      }
+      .footer-copy {
+        margin: 0 auto;
+        max-width: 500px;
+      }
+    }
+  }
+}
+/*MediaQuery >1190px*/
+@media screen and (min-width: 1000px) {
+  .footer {
+    .container-footer {
+      .footer-info {
+        padding-left: 4rem;
+        padding-right: 4rem;
+      }
+      .footer-copy {
+        max-width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        .footer-icons {
+          max-width: 120px;
+        }
+      }
+    }
+  }
+}
